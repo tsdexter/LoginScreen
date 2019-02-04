@@ -30,11 +30,14 @@ class ViewController: UIViewController {
      */
     @IBAction func onLoginClick(_ sender: Any) {
         // get field values
-        let username = usernameField.text
-        let password = passwordField.text
+        let username = usernameField.text ?? ""
+        let password = passwordField.text ?? ""
+        
+        // check login info with LoginManager
+        let loginManager = LoginManager(username: username, password: password)
         
         // check login info
-        if (username == "test" && password == "test") {
+        if (loginManager.login()) {
             errorLabel.isHidden = true
         } else {
             errorLabel.isHidden = false

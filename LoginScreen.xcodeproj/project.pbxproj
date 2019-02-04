@@ -12,6 +12,7 @@
 		E485A1082208ADA200FD11F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E485A1062208ADA200FD11F2 /* Main.storyboard */; };
 		E485A10A2208ADA200FD11F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E485A1092208ADA200FD11F2 /* Assets.xcassets */; };
 		E485A10D2208ADA200FD11F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E485A10B2208ADA200FD11F2 /* LaunchScreen.storyboard */; };
+		E485A1152208BDB900FD11F2 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485A1142208BDB900FD11F2 /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E485A1092208ADA200FD11F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E485A10C2208ADA200FD11F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E485A10E2208ADA200FD11F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E485A1142208BDB900FD11F2 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E485A1022208ADA200FD11F2 /* AppDelegate.swift */,
 				E485A1042208ADA200FD11F2 /* ViewController.swift */,
 				E485A1062208ADA200FD11F2 /* Main.storyboard */,
+				E485A1142208BDB900FD11F2 /* LoginManager.swift */,
 				E485A1092208ADA200FD11F2 /* Assets.xcassets */,
 				E485A10B2208ADA200FD11F2 /* LaunchScreen.storyboard */,
 				E485A10E2208ADA200FD11F2 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				E485A1052208ADA200FD11F2 /* ViewController.swift in Sources */,
 				E485A1032208ADA200FD11F2 /* AppDelegate.swift in Sources */,
+				E485A1152208BDB900FD11F2 /* LoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
