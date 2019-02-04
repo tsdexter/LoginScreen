@@ -40,7 +40,7 @@
                                 <rect key="frame" x="16" y="198" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCq-zG-zIw">
                                 <rect key="frame" x="16" y="246" width="343" height="43"/>
@@ -49,6 +49,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginClick:" destination="BYZ-38-t0r" eventType="touchDown" id="Gde-KZ-T0M"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Invalid Credentials. Please try again." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-Ky-ht9">
                                 <rect key="frame" x="16" y="330" width="343" height="21"/>
@@ -71,6 +74,7 @@
                             <constraint firstItem="spc-Js-BMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9yb-MW-vea"/>
                             <constraint firstItem="hLU-BV-8VI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="175" id="BYu-ub-XPV"/>
                             <constraint firstItem="43w-Sc-a8p" firstAttribute="top" secondItem="spc-Js-BMv" secondAttribute="bottom" constant="30" id="DZ3-NP-szO"/>
+                            <constraint firstItem="JYp-Ky-ht9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EN9-xQ-mvj"/>
                             <constraint firstItem="SCq-zG-zIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="ERb-h1-Gac"/>
                             <constraint firstItem="43w-Sc-a8p" firstAttribute="top" secondItem="spc-Js-BMv" secondAttribute="bottom" constant="30" id="HgF-7e-IzW"/>
                             <constraint firstItem="SCq-zG-zIw" firstAttribute="top" secondItem="3ko-jE-yYk" secondAttribute="bottom" constant="18" id="IMk-SR-lK2"/>
@@ -81,6 +85,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ko-jE-yYk" secondAttribute="trailing" constant="16" id="UwX-uT-Z9h"/>
                             <constraint firstItem="3ko-jE-yYk" firstAttribute="top" secondItem="hLU-BV-8VI" secondAttribute="bottom" constant="8" id="ZFO-g5-Jto"/>
                             <constraint firstItem="hLU-BV-8VI" firstAttribute="top" secondItem="43w-Sc-a8p" secondAttribute="bottom" constant="45" id="abd-Ly-ly9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JYp-Ky-ht9" secondAttribute="trailing" constant="16" id="afL-nH-afX"/>
                             <constraint firstItem="JYp-Ky-ht9" firstAttribute="top" secondItem="SCq-zG-zIw" secondAttribute="bottom" constant="41" id="bWk-lv-9Yf"/>
                             <constraint firstItem="3ko-jE-yYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bvn-L8-fdH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ko-jE-yYk" secondAttribute="trailing" constant="16" id="kzN-OX-Opt"/>
@@ -97,6 +102,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="JYp-Ky-ht9" id="u6U-Zs-471"/>
+                        <outlet property="passwordField" destination="3ko-jE-yYk" id="Q9f-Lh-Auk"/>
+                        <outlet property="usernameField" destination="hLU-BV-8VI" id="PMV-JG-QWO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
