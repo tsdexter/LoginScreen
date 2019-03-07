@@ -9,6 +9,7 @@
 import Foundation
 
 class LoginManager {
+    static var attempts: Int = 3
     
     // keep track of credentials
     var username: String
@@ -21,11 +22,27 @@ class LoginManager {
     }
     
     // check login and return result
-    func login() -> Bool {
-        if(username == "test" && password == "test") {
-            return true
+    func login() -> String {
+        if(
+            LoginManager.attempts > 0 && // not locked out
+            username == "test" &&
+            password == "test"
+        ) {
+            // reset attempts to 3
+            LoginManager.attempts = 3
+            
+            // return successful login
+            return "success"
         } else {
-            return false
+            // locked the app after 3 failed attempts
+            if (LoginManager.attempts == 1) {
+                return "locked"
+            }
+            
+            LoginManager.attempts = LoginManager.attempts - 1
+            
+            // credentials error
+            return "error"
         }
     }
 }

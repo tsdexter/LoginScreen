@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +38,24 @@ class ViewController: UIViewController {
         let loginManager = LoginManager(username: username, password: password)
         
         // check login info
-        if (loginManager.login()) {
-            errorLabel.isHidden = true
-        } else {
+        let login: String = loginManager.login()
+        let attempts: NSNumber = LoginManager.attempts as NSNumber
+        if (login == "success") {
             errorLabel.isHidden = false
+            errorLabel.text = "Login Successful"
+        } else if (login == "error") {
+            errorLabel.isHidden = false
+            errorLabel.text =
+                "Login Failed. "
+                + attempts.stringValue
+                + " attempt"
+                + (LoginManager.attempts > 1 ? "s" : "") // pluralize
+                + " remaining."
+            
+        } else if (login == "locked") {
+            errorLabel.isHidden = false
+            errorLabel.text = "App Locked"
+            //loginButton.isEnabled = false
         }
     }
 }

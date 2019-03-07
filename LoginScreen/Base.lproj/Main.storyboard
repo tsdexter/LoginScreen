@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="errorLabel" destination="JYp-Ky-ht9" id="u6U-Zs-471"/>
+                        <outlet property="loginButton" destination="SCq-zG-zIw" id="jZu-5U-Io7"/>
                         <outlet property="passwordField" destination="3ko-jE-yYk" id="Q9f-Lh-Auk"/>
                         <outlet property="usernameField" destination="hLU-BV-8VI" id="PMV-JG-QWO"/>
                     </connections>
