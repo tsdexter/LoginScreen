@@ -55,8 +55,22 @@ class ViewController: UIViewController {
         } else if (login == "locked") {
             errorLabel.isHidden = false
             errorLabel.text = "App Locked"
-            //loginButton.isEnabled = false
+            
+            // disable login button
+            disableButton(button: loginButton)
         }
+    }
+    
+    /**
+     * Disable a button and provide visual cue
+     */
+    func disableButton(button: UIButton) {
+        button.isEnabled = false
+        
+        // visual cues
+        button.backgroundColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        button.tintColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        button.setTitle("Disabled", for: .normal)
     }
 }
 
